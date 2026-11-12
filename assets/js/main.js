@@ -15,7 +15,8 @@
   box.addEventListener('click', (e) => { if (e.target === box) box.close(); });
 })();
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // YouTube movie: click-to-play facade (nothing loads from YouTube until the visitor presses play)
 (() => {
@@ -34,4 +35,13 @@ document.getElementById('year').textContent = new Date().getFullYear();
     f.allowFullscreen = true;
     btn.replaceWith(f);
   }, { once: true });
+})();
+
+// Mobile tab bar: bring the current tab into view
+(() => {
+  const tabs = document.querySelector('.tabs');
+  const cur = tabs && tabs.querySelector('[aria-current="page"]');
+  if (!cur || tabs.scrollWidth <= tabs.clientWidth) return;
+  const offset = cur.getBoundingClientRect().left - tabs.getBoundingClientRect().left;
+  tabs.scrollLeft += offset - (tabs.clientWidth - cur.offsetWidth) / 2;
 })();

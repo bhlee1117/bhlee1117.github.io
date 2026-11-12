@@ -13,17 +13,16 @@
 
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Byung Hun Lee, PhD">
-  <meta property="og:description" content="How neural activity shapes molecular responses during learning — optical approaches in behaving mice.">
+  <meta property="og:description" content="Byung Hun Lee, PhD — postdoctoral researcher in the Adam E. Cohen Lab at Harvard University, studying how neural activity shapes molecular responses during learning using optical approaches.">
   <meta property="og:url" content="https://bhlee1117.github.io/">
   <meta property="og:image" content="https://bhlee1117.github.io/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-
+  <link rel="stylesheet" href="/assets/css/style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,13 +46,14 @@
 
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
-      <a class="brand" href="#top">Byung Hun Lee</a>
-      <ul class="nav-links">
-        <li><a href="#research">Research</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#future">Future program</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <a class="brand" href="/">Byung Hun Lee</a>
+      <ul class="tabs">
+        <li><a href="/" aria-current="page">Bio</a></li>
+        <li><a href="/research/">Research</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/publications/">Publications</a></li>
+        <li><a href="/projects/">Vibe coding</a></li>
+        <li><a href="/skills/">Skills</a></li>
       </ul>
     </nav>
   </header>
@@ -77,12 +77,15 @@
             <li><a class="button ghost" href="https://github.com/bhlee1117" rel="noopener">
               <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
               GitHub</a></li>
+            <li><a class="button ghost" href="/cv/">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+              CV</a></li>
           </ul>
         </div>
         <figure class="portrait">
           <picture>
-            <source srcset="assets/img/portrait.webp" type="image/webp">
-            <img src="assets/img/portrait.jpg" width="960" height="1200" alt="Portrait of Byung Hun Lee">
+            <source srcset="/assets/img/portrait.webp" type="image/webp">
+            <img src="/assets/img/portrait.jpg" width="960" height="1200" alt="Portrait of Byung Hun Lee">
           </picture>
         </figure>
       </div>
@@ -104,199 +107,71 @@
       </div>
     </section>
 
-    <!-- Research questions -->
-    <section class="section" id="research">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">Research questions</p>
-          <h2>From activity patterns to molecular programs</h2>
-        </header>
-        <ol class="questions">
-          <li>
-            <span class="q-num">1</span>
-            <p>How do neurons determine molecular programs in response to neural activity, such as plateau potentials, and how do these programs shape subsequent neuronal function?</p>
-          </li>
-          <li>
-            <span class="q-num">2</span>
-            <p>How do learning rules that shape neural activity influence molecular responses?</p>
-          </li>
-        </ol>
-        <figure class="figure wide">
-          <button class="zoom" type="button" aria-label="Enlarge figure: Linking functional activity to gene expression">
-            <img src="assets/img/linking-activity-gene-expression.webp" width="944" height="530" loading="lazy"
-                 alt="Schematic linking functional activity (electrical, Ca2+ second messenger and synaptic-input signals) to gene expression (transcription, RNA localization and local translation) across milliseconds to hours of memory formation, organized as temporal, spatial and causal coupling.">
-          </button>
-          <figcaption>Linking functional activity to gene expression across time and space — <strong>temporal</strong>, <strong>spatial</strong> and <strong>causal</strong> coupling.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- Research experience -->
-    <section class="section alt" id="experience">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">Research experience</p>
-          <h2>Seeing activity and molecules in the living brain</h2>
-        </header>
-        <div class="cards">
-          <article class="card">
-            <figure class="figure">
-              <button class="zoom" type="button" aria-label="Enlarge figure: In vivo imaging of Arc mRNA">
-                <img src="assets/img/arc-mrna-imaging.webp" width="1112" height="491" loading="lazy"
-                     alt="Arc-PBS knock-in mouse crossed with PCP-GFP mouse to label endogenous Arc mRNA; hippocampal imaging window; Arc mRNA transcription sites in neuronal nuclei; two-photon microscope with spherical treadmill virtual reality; Ca2+ traces of Arc-negative and Arc-positive neurons.">
-              </button>
-            </figure>
-            <div class="card-body">
-              <p class="card-num">01</p>
-              <h3>In vivo imaging of <i>Arc</i> mRNA following memory formation</h3>
-              <p>Endogenous <i>Arc</i> mRNA is tagged with RNA stem-loop repeats (Arc-PBS × PCP-GFP mice), so nascent transcripts light up as transcription sites in hippocampal neurons of living mice. Pairing this with two-photon Ca<sup>2+</sup> imaging during virtual-reality behavior compares the activity of <i>Arc</i><sup>+</sup> and <i>Arc</i><sup>−</sup> neurons.</p>
-            </div>
-          </article>
-          <article class="card">
-            <figure class="figure">
-              <button class="zoom" type="button" aria-label="Enlarge figure: All-optical dendritic electrophysiology">
-                <img src="assets/img/dendritic-voltage-imaging.webp" width="948" height="550" loading="lazy"
-                     alt="CheRiff and Voltron2 in the membrane; optical access to hippocampus; reconstruction of a pyramidal neuron with basal, soma, trunk, oblique and distal compartments; simultaneous voltage traces from each compartment during stepped wide-field optogenetic stimulation.">
-              </button>
-            </figure>
-            <div class="card-body">
-              <p class="card-num">02</p>
-              <h3>All-optical dendritic electrophysiology in behaving mice</h3>
-              <p>Combining the optogenetic actuator CheRiff with the voltage indicator Voltron2 lets me stimulate neurons with light and record voltage simultaneously across the dendritic tree — basal, soma, trunk, oblique and distal branches — of hippocampal pyramidal neurons in awake mice.</p>
-            </div>
-          </article>
+    <section class="section tight" id="bio">
+      <div class="container bio-grid">
+        <div>
+          <header class="section-head">
+            <p class="eyebrow">Bio</p>
+            <h2>From mRNA imaging to dendritic voltage</h2>
+          </header>
+          <div class="prose">
+            <p>I am a postdoctoral researcher in Adam E. Cohen’s lab in the Department of Chemistry and Chemical Biology at Harvard University. I trained as a physicist, with a B.S. from Sungkyunkwan University and a Ph.D. from Seoul National University with Hye Yoon Park, and I build optical methods to watch neurons compute and remember in living animals.</p>
+            <p>During my Ph.D. I imaged single mRNAs in live neurons and animals. I wrote <a href="https://github.com/bhlee1117/HybTrack" rel="noopener">HybTrack</a>, a single-particle tracking package, to follow β-actin mRNA moving through axons, and I recorded transcription of the immediate-early gene <i>Arc</i> in real time in the hippocampus and retrosplenial cortex of live mice during memory formation and retrieval.</p>
+            <p>At Harvard I use all-optical electrophysiology to map voltage across the dendritic trees of CA1 pyramidal neurons in mice navigating virtual reality, asking what dendritic excitations do during behavior. Next, I want to connect these activity patterns to the molecular programs they set off during learning — see <a href="/research/">Research</a>.</p>
+          </div>
         </div>
-
-        <!-- Movie: set data-yt to the YouTube video ID; the block stays hidden while it is empty -->
-        <figure class="video" id="movie" data-yt="" hidden>
-          <div class="video-frame">
-            <button class="video-play" type="button" aria-label="Play movie: voltage imaging of CA1 dendrites through a hippocampal prism">
-              <picture>
-                <source srcset="assets/img/movie-poster.webp" type="image/webp">
-                <img src="assets/img/movie-poster.jpg" width="1280" height="720" loading="lazy"
-                     alt="Rendering of a CA1 pyramidal neuron imaged through a prism, colored by recorded dendritic voltage during a spontaneous plateau potential, with a kymograph above.">
-              </picture>
-              <span class="play-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>
-            </button>
+        <aside>
+          <div class="side-card">
+            <h2>Positions</h2>
+            <ul class="facts">
+              <li><span class="when">2022–</span><span class="what">Postdoctoral Researcher<span>Harvard University · Adam E. Cohen Lab</span></span></li>
+              <li><span class="when">2021–22</span><span class="what">Postdoctoral Researcher<span>Seoul National University · Hye Yoon Park Lab</span></span></li>
+            </ul>
           </div>
-          <figcaption>
-            <strong>Movie.</strong> Voltage imaging of CA1 pyramidal-neuron dendrites through a hippocampal prism: recorded dendritic voltage mapped onto the reconstructed neurons during wide-field optogenetic stimulation and spontaneous plateau potentials.
-            <a class="yt-link" href="#" rel="noopener">Watch on YouTube</a>
-          </figcaption>
-        </figure>
+          <div class="side-card">
+            <h2>Education</h2>
+            <ul class="facts">
+              <li><span class="when">2021</span><span class="what">Ph.D. in Physics<span>Seoul National University</span></span></li>
+              <li><span class="when">2015</span><span class="what">B.S. in Physics<span>Sungkyunkwan University</span></span></li>
+            </ul>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <!-- Future program -->
-    <section class="section" id="future">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">Future program</p>
-          <h2>Three directions</h2>
-        </header>
-
-        <article class="program">
-          <div class="program-text">
-            <p class="card-num">01</p>
-            <h3>AI-assisted programmable microscopy</h3>
-            <p>Programmable microscopy enables (i) adaptive imaging, (ii) real-time analysis and intervention, (iii) molecular tool screening, and (iv) closed-loop neural interfaces.</p>
-          </div>
-          <figure class="figure">
-            <button class="zoom" type="button" aria-label="Enlarge figure: AI-assisted programmable microscopy">
-              <img src="assets/img/ai-programmable-microscopy.webp" width="2000" height="939" loading="lazy"
-                   alt="Control software and a data-acquisition system drive modular devices — electrophysiology, camera, scanner, light patterning, behavior, amplifier, modulator, shutter, filter and detector — while an AI agent generates, revises and tests the control code, enabling adaptive microscopy, real-time analysis and intervention, molecular tool screening and closed-loop neural interfaces.">
-            </button>
-          </figure>
-        </article>
-
-        <article class="program">
-          <div class="program-text">
-            <p class="card-num">02</p>
-            <h3>Linking activity patterns to gene expression</h3>
-            <p>Combine (i) population voltage imaging, (ii) phototagging, and (iii) transcriptomic profiling to identify molecular responses associated with neural activity and build predictive models of activity-dependent gene expression.</p>
-          </div>
-          <div class="figure-pair">
-            <figure class="figure">
-              <button class="zoom" type="button" aria-label="Enlarge figure: Map the activity patterns that drive gene expression">
-                <img src="assets/img/activity-transcriptome-map.webp" width="2000" height="1528" loading="lazy"
-                     alt="Activity patterns during learning are related to gene-expression profiles through an unknown transfer matrix; workflow of imaging, online analysis, selecting and tagging target cells by a user-defined objective, and measuring the transcriptome.">
-              </button>
-              <figcaption>Mapping activity to transcription: image, analyze online, tag target cells, then profile their transcriptome.</figcaption>
-            </figure>
-            <figure class="figure">
-              <button class="zoom" type="button" aria-label="Enlarge figure: How does local input guide RNA localization?">
-                <img src="assets/img/rna-localization.webp" width="976" height="537" loading="lazy"
-                     alt="Voltage, calcium and glutamate signals in a neuron, with imaging of transcription, RNA transport along dendrites, and RNA localization near synapses receiving local input.">
-              </button>
-              <figcaption>Spatial coupling: how local voltage, Ca<sup>2+</sup> and glutamate signals guide RNA transport and localization in dendrites.</figcaption>
-            </figure>
-          </div>
-        </article>
-
-        <article class="program">
-          <div class="program-text">
-            <p class="card-num">03</p>
-            <h3>Shaping molecular responses through BCI</h3>
-            <p>Use operant closed-loop reinforcement to train specific neural activity patterns and test whether different patterns produce distinct molecular responses.</p>
-          </div>
-          <figure class="figure">
-            <button class="zoom" type="button" aria-label="Enlarge figure: Molecular programs underlying directed neural activity shift">
-              <img src="assets/img/bci-molecular-programs.webp" width="2000" height="835" loading="lazy"
-                   alt="Question: what molecular changes accompany a learned shift in neural activity? Approach: closed-loop reinforcement, delivering reward when a function of recorded neural activity exceeds a threshold. Readout: gene-expression patterns including transcription and RNA localization to target synapses.">
-            </button>
-          </figure>
-        </article>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section class="section alt" id="education">
+    <section class="section alt" id="news">
       <div class="container narrow">
         <header class="section-head">
-          <p class="eyebrow">Training</p>
-          <h2>Education &amp; positions</h2>
+          <p class="eyebrow">News</p>
+          <h2>Recent highlights</h2>
         </header>
-        <ol class="timeline">
-          <li>
-            <h3>Postdoctoral Researcher</h3>
-            <p>Adam E. Cohen Lab, Department of Chemistry and Chemical Biology, Harvard University</p>
-          </li>
-          <li>
-            <h3>Ph.D. in Physics</h3>
-            <p>Seoul National University · Advisor: Prof. Hyeyoon Park</p>
-          </li>
-          <li>
-            <h3>B.S. in Physics</h3>
-            <p>Sungkyunkwan University</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section" id="contact">
-      <div class="container narrow contact">
-        <header class="section-head">
-          <p class="eyebrow">Contact</p>
-          <h2>Get in touch</h2>
-        </header>
-        <p class="contact-line"><a href="mailto:byunghun_lee@fas.harvard.edu">byunghun_lee@fas.harvard.edu</a></p>
-        <p class="muted">Department of Chemistry and Chemical Biology<br>Harvard University, Cambridge, MA</p>
+        <ul class="news">
+          <li><span class="when">May 2026</span><p class="what">Talk at the New England Bioscience Society Annual Meeting, Boston: <a href="https://doi.org/10.64898/2026.01.03.696606" rel="noopener">fast dendritic excitations and back-propagation in CA1 during behavior</a>.</p></li>
+          <li><span class="when">2026</span><p class="what">Received the <strong>NEBS–GC Biopharma Award</strong> from the New England Bioscience Society.</p></li>
+          <li><span class="when">2026</span><p class="what"><a href="https://doi.org/10.1038/s41593-026-02339-4" rel="noopener">Voltage dynamics of cortical dendrites in vivo</a> published in <em>Nature Neuroscience</em> (co-first author).</p></li>
+          <li><span class="when">Jan 2026</span><p class="what">Preprint: <a href="https://doi.org/10.64898/2026.01.03.696606" rel="noopener">Fast dendritic excitations primarily mediate back-propagation in CA1 pyramidal neurons during behavior</a>.</p></li>
+          <li><span class="when">Mar 2025</span><p class="what">Talk at the Gordon Research Seminar <em>Dendrites: Molecules, Structure and Function</em>, Ventura, CA.</p></li>
+          <li><span class="when">2025</span><p class="what"><a href="https://doi.org/10.1038/s41467-025-55819-9" rel="noopener">Dendritic excitations govern back-propagation via a spike-rate accelerometer</a> published in <em>Nature Communications</em>.</p></li>
+        </ul>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year">2026</span> Byung Hun Lee</p>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="/">Byung Hun Lee</a>
+        <p>Department of Chemistry and Chemical Biology, Harvard University<br>12 Oxford Street, Cambridge, MA 02138</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="mailto:byunghun_lee@fas.harvard.edu">byunghun_lee@fas.harvard.edu</a></li>
+        <li><a href="https://github.com/bhlee1117" rel="noopener">GitHub</a></li>
+        <li><a href="/assets/cv/Byung_Hun_Lee_CV.pdf">CV (PDF)</a></li>
+      </ul>
     </div>
+    <div class="container footer-meta">© <span id="year">2026</span> Byung Hun Lee</div>
   </footer>
 
-  <dialog class="lightbox" id="lightbox" aria-label="Enlarged figure">
-    <form method="dialog"><button class="close" aria-label="Close">×</button></form>
-    <img alt="">
-  </dialog>
-
-  <script src="assets/js/main.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
