@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vibe coding projects · Byung Hun Lee</title>
-  <meta name="description" content="Research tools Byung Hun Lee builds with AI coding assistants: BrainCAD, PaperTree, Genesis and a data-driven Blender movie of dendritic voltage.">
+  <meta name="description" content="Research tools Byung Hun Lee builds with AI coding assistants: BrainCAD for stereotaxic planning, PaperTree for the literature, and Genesis for molecular cloning.">
   <meta name="author" content="Byung Hun Lee">
   <link rel="canonical" href="https://bhlee1117.github.io/projects/">
   <meta name="color-scheme" content="light dark">
@@ -13,7 +13,7 @@
 
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Vibe coding projects · Byung Hun Lee">
-  <meta property="og:description" content="Research tools Byung Hun Lee builds with AI coding assistants: BrainCAD, PaperTree, Genesis and a data-driven Blender movie of dendritic voltage.">
+  <meta property="og:description" content="Research tools Byung Hun Lee builds with AI coding assistants: BrainCAD for stereotaxic planning, PaperTree for the literature, and Genesis for molecular cloning.">
   <meta property="og:url" content="https://bhlee1117.github.io/projects/">
   <meta property="og:image" content="https://bhlee1117.github.io/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -54,69 +54,42 @@
       <div class="container">
         <div class="projects">
         <article class="project">
-          <div class="project-shot"><img src="/assets/img/projects/braincad.webp" width="800" height="499" loading="lazy" alt="BrainCAD in the browser: a 3D mouse brain with a stereotaxic target, coronal, sagittal and horizontal atlas slices, and a coordinate-profile panel."></div>
+          <div class="project-shot"><a class="shot-link" href="/projects/braincad/" aria-hidden="true" tabindex="-1"></a><video class="loop-video" autoplay muted loop playsinline preload="metadata" poster="/assets/img/projects/braincad.webp" width="1280" height="800" aria-label="BrainCAD in use: orbiting the 3D mouse brain, switching preset views, and moving the target so the coronal, sagittal and horizontal atlas slices update."><source src="/assets/video/braincad-demo.mp4" type="video/mp4"></video></div>
           <div class="project-body">
-            <h2>BrainCAD</h2>
+            <h2><a href="/projects/braincad/">BrainCAD</a></h2>
             <p class="project-tagline">3D stereotaxic planning for injections, implants and optical access</p>
             <p>Puts the mouse brain atlas, stereotaxic targets, pipettes, cannulas, prisms, objectives and custom hardware into one 3D scene, to answer whether a target can be reached with a given object, at a given angle, without hitting anything.</p>
             <ul class="project-points"><li>Atlas viewer with region lookup and orthogonal slice views</li><li>Import STL/OBJ/GLB hardware; collision and clearance checks</li><li>Objective-view renders and axon-projection back-tracing</li></ul>
             <ul class="chips" aria-label="Built with"><li>TypeScript</li><li>three.js</li><li>Vite</li><li>Allen CCFv3</li></ul>
-            <div class="project-links"><a class="button small" href="https://bhlee1117.github.io/BrainCAD/" rel="noopener">Open BrainCAD</a><a class="button small ghost" href="https://github.com/bhlee1117/BrainCAD" rel="noopener">GitHub</a></div>
+            <div class="project-links"><a class="button small" href="/projects/braincad/">Read more</a><a class="button small ghost" href="https://bhlee1117.github.io/BrainCAD/" rel="noopener">Open BrainCAD</a><a class="button small ghost" href="https://github.com/bhlee1117/BrainCAD" rel="noopener">GitHub</a></div>
           </div>
         </article>
         <article class="project">
-          <div class="project-shot"><img src="/assets/img/projects/papertree.webp" width="800" height="499" loading="lazy" alt="PaperTree claim tree for dendritic computation: questions, the claims under the first question, and the evidence base for one claim."></div>
+          <div class="project-shot"><a class="shot-link" href="/projects/papertree/" aria-hidden="true" tabindex="-1"></a><video class="loop-video" autoplay muted loop playsinline preload="metadata" poster="/assets/img/projects/papertree.webp" width="1280" height="800" aria-label="PaperTree in use: opening questions, claims and their evidence, then the author–paper network."><source src="/assets/video/papertree-demo.mp4" type="video/mp4"></video></div>
           <div class="project-body">
-            <h2>PaperTree</h2>
+            <h2><a href="/projects/papertree/">PaperTree</a></h2>
             <p class="project-tagline">A literature atlas built around claims, not papers</p>
             <p>Turns a Zotero collection into a map of what the field claims, which papers support, qualify or contradict each claim, and where the evidence is thin. The live atlas covers dendritic computation.</p>
             <ul class="project-points"><li>Papers labelled by preparation and measurement; claims written by hand</li><li>Flags claims that rest on a single preparation</li><li>Incremental updates: only new papers are processed</li></ul>
             <ul class="chips" aria-label="Built with"><li>Python</li><li>Claude API</li><li>OpenAlex</li><li>Zotero</li></ul>
-            <div class="project-links"><a class="button small" href="https://bhlee1117.github.io/PaperTree/" rel="noopener">Open PaperTree</a><a class="button small ghost" href="https://github.com/bhlee1117/PaperTree" rel="noopener">GitHub</a></div>
+            <div class="project-links"><a class="button small" href="/projects/papertree/">Read more</a><a class="button small ghost" href="https://bhlee1117.github.io/PaperTree/" rel="noopener">Open PaperTree</a><a class="button small ghost" href="https://github.com/bhlee1117/PaperTree" rel="noopener">GitHub</a></div>
           </div>
         </article>
         <article class="project">
-          <div class="project-shot text"><p>Plasmid inventory → construct spec → ranked cloning routes</p></div>
+          <div class="project-shot"><a class="shot-link" href="/projects/genesis/" aria-hidden="true" tabindex="-1"></a><img src="/assets/img/projects/genesis-card.webp" width="1280" height="800" loading="lazy" alt="The Genesis route view: ranked cloning routes above, and a diagram of the chosen route below."></div>
           <div class="project-body">
-            <h2>Genesis</h2>
+            <h2><a href="/projects/genesis/">Genesis</a></h2>
             <p class="project-tagline">A shared cloning designer for the lab’s plasmid inventory</p>
             <p>Indexes the plasmid files on the lab share, normalizes them into a searchable inventory of plasmids and reusable parts, validates a construct in silico, and generates ranked cloning routes with a primer table and a step-by-step protocol.</p>
             <ul class="project-points"><li>Reads GenBank, ApE, SnapGene and FASTA files</li><li>Collapses duplicate plasmids saved by different people</li><li>Runs on a stock Python install, no network needed</li></ul>
             <ul class="chips" aria-label="Built with"><li>Python</li><li>SQLite</li><li>Vanilla JS</li></ul>
-            <div class="project-links"><a class="button small" href="https://github.com/bhlee1117/Genesis" rel="noopener">GitHub</a></div>
+            <div class="project-links"><a class="button small" href="/projects/genesis/">Read more</a><a class="button small ghost" href="https://github.com/bhlee1117/Genesis" rel="noopener">GitHub</a></div>
           </div>
         </article>
-        <article class="project">
-          <div class="project-shot"><img src="/assets/img/projects/prism-movie.webp" width="1280" height="720" loading="lazy" alt="Blender rendering of the prism implant over hippocampus with CA1 neurons, CA3 axons and an entorhinal-cortex axon labeled."></div>
-          <div class="project-body">
-            <h2>Prism voltage movie</h2>
-            <p class="project-tagline">A data-driven 3D movie of dendritic voltage in vivo</p>
-            <p>A Blender pipeline that places reconstructed CA1 neurons inside a 3D model of the prism implant and drives their color with recorded dendritic voltage, alongside kymographs, the optogenetic stimulation pattern and MouseLight axon reconstructions.</p>
-            <ul class="project-points"><li>Recorded voltage mapped onto traced dendrites</li><li>Unmeasured branches filled in with a passive cable model</li><li>1 ms of data per frame, rendered at 1080p</li></ul>
-            <ul class="chips" aria-label="Built with"><li>Blender</li><li>Python</li><li>Geometry Nodes</li><li>MATLAB</li></ul>
-            <div class="project-links"><a class="button small" href="/research/#experience" rel="noopener">See the research</a></div>
-          </div>
-        </article>
-        </div>
+                </div>
       </div>
     </section>
 
-    <section class="section alt" id="code">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">Research code</p>
-          <h2>Analysis and acquisition code</h2>
-        </header>
-        <ul class="code-list">
-          <li><a href="https://github.com/bhlee1117/HybTrack" rel="noopener">HybTrack</a><p>Hybrid manual/automatic single-particle tracking for dim signals (Sci. Rep. 2018).</p></li>
-          <li><a href="https://github.com/bhlee1117/Cohen_lab_BHL_Code" rel="noopener">Cohen_lab_BHL_Code</a><p>Analysis code for dendritic voltage imaging in the Cohen lab.</p></li>
-          <li><a href="https://github.com/bhlee1117/cohenlab-VR" rel="noopener">cohenlab-VR</a><p>Virtual-reality behavior setup based on ViRMEn.</p></li>
-          <li><a href="https://github.com/bhlee1117/Arc_TXN_im_reg_analysis_VR" rel="noopener">Arc_TXN_im_reg_analysis_VR</a><p>Analysis of Arc transcription imaging with virtual-reality behavior.</p></li>
-          <li><a href="https://github.com/bhlee1117/Invivo_image_registration" rel="noopener">Invivo_image_registration</a><p>Registration of in vivo imaging data.</p></li>
-          <li><a href="https://github.com/bhlee1117/Dendrite_tracing" rel="noopener">Dendrite_tracing</a><p>Tracing dendrites from imaging data.</p></li>
-        </ul>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -128,6 +101,7 @@
       <ul class="footer-links">
         <li><a href="mailto:byunghun_lee@fas.harvard.edu">byunghun_lee@fas.harvard.edu</a></li>
         <li><a href="https://github.com/bhlee1117" rel="noopener">GitHub</a></li>
+        <li><a href="https://scholar.google.com/citations?user=bluHPzY7HD0C" rel="noopener">Google Scholar</a></li>
         <li><a href="/assets/cv/Byung_Hun_Lee_CV.pdf">CV (PDF)</a></li>
       </ul>
     </div>

@@ -37,7 +37,7 @@
       { "@type": "CollegeOrUniversity", "name": "Seoul National University" },
       { "@type": "CollegeOrUniversity", "name": "Sungkyunkwan University" }
     ],
-    "sameAs": ["https://github.com/bhlee1117"]
+    "sameAs": ["https://github.com/bhlee1117", "https://scholar.google.com/citations?user=bluHPzY7HD0C"]
   }
   </script>
 </head>
@@ -77,6 +77,9 @@
             <li><a class="button ghost" href="https://github.com/bhlee1117" rel="noopener">
               <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
               GitHub</a></li>
+            <li><a class="button ghost" href="https://scholar.google.com/citations?user=bluHPzY7HD0C" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3 1.5 8.5 12 14l10.5-5.5z"/><path d="M5.5 11v5c0 1.7 2.9 3 6.5 3s6.5-1.3 6.5-3v-5"/></svg>
+              Google Scholar</a></li>
             <li><a class="button ghost" href="/cv/">
               <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
               CV</a></li>
@@ -107,6 +110,36 @@
       </div>
     </section>
 
+    <section class="section tight" id="movies">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">In motion</p>
+          <h2>Watching spikes travel through dendrites</h2>
+          <p class="section-lead">Voltage imaging can resolve when each part of the dendritic tree fires, to a fraction of a millisecond. Two examples from my current manuscript, slowed down so the spread is visible, below the recording they come from.</p>
+        </header>
+        <div class="movie-row">
+                  <figure class="wide-media">
+            <div class="media-frame" style="aspect-ratio: 908 / 348">
+              <video class="loop-video speed-2x" autoplay muted loop playsinline preload="metadata" poster="/assets/video/snapt-bap-poster.webp"
+                     aria-label="Spike-timing map of a CA1 pyramidal neuron: activity appears near the soma and spreads outward into the dendrites over about two milliseconds.">
+                <source src="/assets/video/snapt-bap.mp4" type="video/mp4">
+              </video>
+            </div>
+            <figcaption><strong>Back-propagation.</strong> SNAPT (sub-Nyquist action-potential timing) map of a CA1 pyramidal neuron: the spike starts near the soma (blue circle) and spreads out into the dendrites within about 2 ms.</figcaption>
+          </figure>
+          <figure class="wide-media">
+            <div class="media-frame" style="aspect-ratio: 1294 / 384">
+              <video class="loop-video speed-2x" autoplay muted loop playsinline preload="metadata" poster="/assets/video/snapt-dendritic-spike-poster.webp"
+                     aria-label="Spike-timing map of a CA1 pyramidal neuron: activity starts in a distal dendrite, travels toward the soma, then spreads into the dendrites on the other side.">
+                <source src="/assets/video/snapt-dendritic-spike.mp4" type="video/mp4">
+              </video>
+            </div>
+            <figcaption><strong>A dendritic spike.</strong> Here the spike starts in a distal dendrite, travels toward the soma over about 1.5 ms, and then spreads into the dendrites on the other side.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="section tight" id="bio">
       <div class="container bio-grid">
         <div>
@@ -116,7 +149,7 @@
           </header>
           <div class="prose">
             <p>I am a postdoctoral researcher in Adam E. Cohen’s lab in the Department of Chemistry and Chemical Biology at Harvard University. I trained as a physicist, with a B.S. from Sungkyunkwan University and a Ph.D. from Seoul National University with Hye Yoon Park, and I build optical methods to watch neurons compute and remember in living animals.</p>
-            <p>During my Ph.D. I imaged single mRNAs in live neurons and animals. I wrote <a href="https://github.com/bhlee1117/HybTrack" rel="noopener">HybTrack</a>, a single-particle tracking package, to follow β-actin mRNA moving through axons, and I recorded transcription of the immediate-early gene <i>Arc</i> in real time in the hippocampus and retrosplenial cortex of live mice during memory formation and retrieval.</p>
+            <p>During my Ph.D. I imaged single mRNAs in live neurons and animals. I followed β-actin mRNA moving through axons, and I recorded transcription of the immediate-early gene <i>Arc</i> in real time in the hippocampus and retrosplenial cortex of live mice during memory formation and retrieval.</p>
             <p>At Harvard I use all-optical electrophysiology to map voltage across the dendritic trees of CA1 pyramidal neurons in mice navigating virtual reality, asking what dendritic excitations do during behavior. Next, I want to connect these activity patterns to the molecular programs they set off during learning — see <a href="/research/">Research</a>.</p>
           </div>
         </div>
@@ -166,6 +199,7 @@
       <ul class="footer-links">
         <li><a href="mailto:byunghun_lee@fas.harvard.edu">byunghun_lee@fas.harvard.edu</a></li>
         <li><a href="https://github.com/bhlee1117" rel="noopener">GitHub</a></li>
+        <li><a href="https://scholar.google.com/citations?user=bluHPzY7HD0C" rel="noopener">Google Scholar</a></li>
         <li><a href="/assets/cv/Byung_Hun_Lee_CV.pdf">CV (PDF)</a></li>
       </ul>
     </div>

@@ -45,3 +45,31 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   const offset = cur.getBoundingClientRect().left - tabs.getBoundingClientRect().left;
   tabs.scrollLeft += offset - (tabs.clientWidth - cur.offsetWidth) / 2;
 })();
+
+// Looping videos: play only while on screen; no autoplay for reduced-motion users
+(() => {
+  const vids = [...document.querySelectorAll('video.loop-video')];
+  if (!vids.length) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    vids.forEach((v) => { if (reduce) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; } });
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(({ target, isIntersecting }) => {
+      if (isIntersecting) target.play().catch(() => {});
+      else target.pause();
+    });
+  }, { threshold: 0.2 });
+  vids.forEach((v) => io.observe(v));
+})();
+
+// Videos marked speed-2x play at double speed
+(() => {
+  document.querySelectorAll('video.speed-2x').forEach((v) => {
+    const set = () => { v.playbackRate = 2; };
+    set();
+    v.addEventListener('loadedmetadata', set);
+    v.addEventListener('play', set);
+  });
+})();

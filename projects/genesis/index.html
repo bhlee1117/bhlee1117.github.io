@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genesis · Byung Hun Lee</title>
+  <meta name="description" content="Indexes the plasmid files already sitting on the lab share, turns them into a searchable inventory, and plans cloning routes from it.">
+  <meta name="author" content="Byung Hun Lee">
+  <link rel="canonical" href="https://bhlee1117.github.io/projects/genesis/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1014" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Genesis · Byung Hun Lee">
+  <meta property="og:description" content="Indexes the plasmid files already sitting on the lab share, turns them into a searchable inventory, and plans cloning routes from it.">
+  <meta property="og:url" content="https://bhlee1117.github.io/projects/genesis/">
+  <meta property="og:image" content="https://bhlee1117.github.io/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="/">Byung Hun Lee</a>
+      <ul class="tabs">
+        <li><a href="/">Bio</a></li>
+        <li><a href="/research/">Research</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/publications/">Publications</a></li>
+        <li><a href="/projects/" aria-current="page">Vibe coding</a></li>
+        <li><a href="/skills/">Skills</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow"><a href="/projects/">Vibe coding</a></p>
+        <h1>Genesis</h1>
+        <p class="project-tagline big">A shared cloning designer for the lab’s plasmid inventory</p>
+        <p class="lead">Indexes the plasmid files already sitting on the lab share, turns them into a searchable inventory, and plans cloning routes from it.</p>
+        <div class="page-actions"><a class="button" href="https://github.com/bhlee1117/Genesis" rel="noopener">GitHub</a></div>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <figure class="wide-media">
+        <div class="media-frame" style="aspect-ratio: 1794 / 1960">
+          <img src="/assets/img/projects/genesis.webp" width="1794" height="1960" loading="lazy"
+               alt="The Genesis route view: six ranked cloning routes across the top, and below them a diagram of the chosen route — three source plasmids, the fragment each contributes, and the assembled product.">
+        </div>
+          <figcaption>The route view. Six ways of building the same construct, ranked and costed, with the reason each infeasible one was rejected. Below, the chosen route drawn out: which plasmid each fragment is amplified from, where the primers sit, and how the pieces meet in the product.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Pipeline</p>
+          <h2>From a folder of plasmid files to a protocol</h2>
+        </header>
+        <div class="pipe-source">
+          <p class="pipe-source-title">The lab share, as it is</p>
+          <p class="pipe-source-sub">GenBank · ApE · SnapGene · FASTA — duplicates collapsed by sequence, Sanger reads flagged</p>
+          <p class="pipe-source-figs"><strong>4,527</strong> plasmids<span>·</span><strong>4,073</strong> parts<span>·</span><strong>72</strong> owners</p>
+        </div>
+        <ol class="pipeline">
+          <li><span class="pipe-n">1</span><h3>Specification</h3><p>What to build, as an ordered list of modules: backbone, promoter, coding sequences, trafficking motifs, polyA.</p></li>
+          <li><span class="pipe-n">2</span><h3>Target construct</h3><p>Each module is resolved against the parts inventory and the intended molecule is assembled and checked in silico.</p></li>
+          <li><span class="pipe-n">3</span><h3>Scan source</h3><p>Which plasmids already hold the pieces, and which existing plasmid is closest to the thing you asked for.</p></li>
+          <li><span class="pipe-n">4</span><h3>Routes</h3><p>Ways of building it — swap a region between two parents, or assemble from scratch — ranked by cost, with infeasible ones explained.</p></li>
+          <li><span class="pipe-n">5</span><h3>Protocol</h3><p>A numbered protocol with an operation code at every step, a primer table computed from the templates, and the checks to run.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container narrow detail-prose">
+      <section class="detail-block">
+        <h2>Why I built it</h2>
+          <p>Our plasmid files live in thousands of folders, saved by different people over many years, in whatever format their software wrote. Finding whether a construct already exists is harder than it should be, and planning a clone means reading maps by eye.</p>
+          <p>Genesis reads that share as it is, rather than asking anyone to reorganize it.</p>
+      </section>
+      <section class="detail-block">
+        <h2>What it does</h2>
+          <p>It parses GenBank, ApE, SnapGene and FASTA files, normalizes mixed line endings, and collapses duplicates: a checksum that ignores rotation and strand means the same plasmid saved three times by three people becomes one entry with three sources. Sanger reads are kept but marked, so no design is ever planned off a raw trace.</p>
+          <p>Features are found two ways that fail differently — label rules over free text, and motif search over the sequence, with peptide motifs matched on the translation so codon choice does not hide them.</p>
+          <p>A construct is specified as an ordered list of modules. Genesis resolves each against the inventory, assembles the intended sequence, validates it, and returns ranked routes with a primer table and a step-by-step protocol.</p>
+      </section>
+      <section class="detail-block">
+        <h2>Where the judgment is</h2>
+          <p>The most useful route is usually a two-parent swap: find the closest existing plasmid, work out the one region that has to change, and find a donor for the new piece. If the closest parent already contains everything asked for, it says so and suggests checking whether the construct exists before cloning anything.</p>
+          <p>It declines to propose things that fail at the bench — a seven-fragment ligation, a 14 kb backbone PCR, a fragment too short to be worth amplifying — and says why instead of quietly offering them.</p>
+          <p>Primers are computed from the template rather than reused from annotations, and melting temperature is reported for the annealing region alone, since quoting the whole oligo including its assembly tail is a common reason a first PCR fails.</p>
+      </section>
+      <section class="detail-block">
+        <h2>Constraints</h2>
+          <p>Python standard library only, no third-party packages, so it runs on a lab machine with a stock install and no network. Everyone in the lab gets the same inventory and the same answers.</p>
+      </section>
+        <ul class="chips" aria-label="Built with"><li>Python</li><li>SQLite</li><li>Vanilla JS</li><li>Standard library only</li></ul>
+        
+        <p class="back-link"><a href="/projects/">← All vibe coding projects</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="/">Byung Hun Lee</a>
+        <p>Department of Chemistry and Chemical Biology, Harvard University<br>12 Oxford Street, Cambridge, MA 02138</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="mailto:byunghun_lee@fas.harvard.edu">byunghun_lee@fas.harvard.edu</a></li>
+        <li><a href="https://github.com/bhlee1117" rel="noopener">GitHub</a></li>
+        <li><a href="https://scholar.google.com/citations?user=bluHPzY7HD0C" rel="noopener">Google Scholar</a></li>
+        <li><a href="/assets/cv/Byung_Hun_Lee_CV.pdf">CV (PDF)</a></li>
+      </ul>
+    </div>
+    <div class="container footer-meta">© <span id="year">2026</span> Byung Hun Lee</div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

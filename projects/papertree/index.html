@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PaperTree · Byung Hun Lee</title>
+  <meta name="description" content="A reference manager answers what have I read. This one answers what the field claims, what holds it up, and where the evidence is thin.">
+  <meta name="author" content="Byung Hun Lee">
+  <link rel="canonical" href="https://bhlee1117.github.io/projects/papertree/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1014" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="PaperTree · Byung Hun Lee">
+  <meta property="og:description" content="A reference manager answers what have I read. This one answers what the field claims, what holds it up, and where the evidence is thin.">
+  <meta property="og:url" content="https://bhlee1117.github.io/projects/papertree/">
+  <meta property="og:image" content="https://bhlee1117.github.io/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="/">Byung Hun Lee</a>
+      <ul class="tabs">
+        <li><a href="/">Bio</a></li>
+        <li><a href="/research/">Research</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/publications/">Publications</a></li>
+        <li><a href="/projects/" aria-current="page">Vibe coding</a></li>
+        <li><a href="/skills/">Skills</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow"><a href="/projects/">Vibe coding</a></p>
+        <h1>PaperTree</h1>
+        <p class="project-tagline big">A literature atlas built around claims, not papers</p>
+        <p class="lead">A reference manager answers “what have I read?”. This answers “what does the field claim, what holds it up, and where is the evidence thin?”</p>
+        <div class="page-actions"><a class="button" href="https://bhlee1117.github.io/PaperTree/" rel="noopener">Open PaperTree</a><a class="button ghost" href="https://github.com/bhlee1117/PaperTree" rel="noopener">GitHub</a></div>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <figure class="wide-media">
+        <div class="media-frame" style="aspect-ratio: 16 / 10">
+          <video class="loop-video" autoplay muted loop playsinline preload="metadata" poster="/assets/img/projects/papertree.webp" aria-label="PaperTree in use: opening questions, claims and their evidence, then the author–paper network.">
+            <source src="/assets/video/papertree-demo.mp4" type="video/mp4">
+          </video>
+        </div>
+          <figcaption>Opening a question, then a claim and the papers attached to it, then the author–paper network view.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container narrow detail-prose">
+      <section class="detail-block">
+        <h2>Why I built it</h2>
+          <p>Reading around dendritic computation, I kept rediscovering that a claim I had taken as settled rested on one preparation, or on one lab. That is visible in principle from a reference library and invisible in practice.</p>
+          <p>So the unit here is the claim, not the paper. Papers attach to claims as evidence that supports, qualifies, contradicts or assumes them.</p>
+      </section>
+      <section class="detail-block">
+        <h2>How it works</h2>
+          <p>A Zotero export goes in. The pipeline pulls metadata, labels each paper by preparation and measurement, and proposes which claims each paper bears on; the model chooses only from claims I have written, and cannot invent one.</p>
+          <p>The claims themselves are mine to write, in a hand-edited file. That is the part that is actually thinking, and the rest exists to keep it cheap to maintain: work is tracked per paper-and-claim pair, so adding a paper or rewording a claim re-runs only what changed.</p>
+          <p>The output is a single self-contained page with three views: the claim tree, an author–paper network where each paper hangs from its nearest predecessor, and a faceted browser over the whole library.</p>
+      </section>
+      <section class="detail-block">
+        <h2>The part I care about</h2>
+          <p>Each claim is checked for thin evidence: whether its positive case rests on a single direct source, or whether every supporting paper shares one preparation or one modality. That second test is the reason the factual labels exist at all.</p>
+          <p>Caveats are computed rather than annotated. A claim supported entirely by calcium imaging automatically inherits the caveat that calcium reports suprathreshold events rather than membrane potential, so adding a caveat later is one rule rather than an edit to every link.</p>
+      </section>
+        <ul class="chips" aria-label="Built with"><li>Python</li><li>Claude API</li><li>OpenAlex</li><li>Zotero</li><li>Vanilla JS</li></ul>
+        <p class="media-note">The live atlas covers dendritic computation; the claims in it are my reading of the field, not a consensus.</p>
+        <p class="back-link"><a href="/projects/">← All vibe coding projects</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="/">Byung Hun Lee</a>
+        <p>Department of Chemistry and Chemical Biology, Harvard University<br>12 Oxford Street, Cambridge, MA 02138</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="mailto:byunghun_lee@fas.harvard.edu">byunghun_lee@fas.harvard.edu</a></li>
+        <li><a href="https://github.com/bhlee1117" rel="noopener">GitHub</a></li>
+        <li><a href="https://scholar.google.com/citations?user=bluHPzY7HD0C" rel="noopener">Google Scholar</a></li>
+        <li><a href="/assets/cv/Byung_Hun_Lee_CV.pdf">CV (PDF)</a></li>
+      </ul>
+    </div>
+    <div class="container footer-meta">© <span id="year">2026</span> Byung Hun Lee</div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

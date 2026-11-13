@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrainCAD · Byung Hun Lee</title>
+  <meta name="description" content="A browser workspace that puts the mouse brain atlas and the hardware of an experiment into the same 3D scene, so a surgery can be checked before it is attempted.">
+  <meta name="author" content="Byung Hun Lee">
+  <link rel="canonical" href="https://bhlee1117.github.io/projects/braincad/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1014" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="BrainCAD · Byung Hun Lee">
+  <meta property="og:description" content="A browser workspace that puts the mouse brain atlas and the hardware of an experiment into the same 3D scene, so a surgery can be checked before it is attempted.">
+  <meta property="og:url" content="https://bhlee1117.github.io/projects/braincad/">
+  <meta property="og:image" content="https://bhlee1117.github.io/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="/">Byung Hun Lee</a>
+      <ul class="tabs">
+        <li><a href="/">Bio</a></li>
+        <li><a href="/research/">Research</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/publications/">Publications</a></li>
+        <li><a href="/projects/" aria-current="page">Vibe coding</a></li>
+        <li><a href="/skills/">Skills</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow"><a href="/projects/">Vibe coding</a></p>
+        <h1>BrainCAD</h1>
+        <p class="project-tagline big">3D stereotaxic planning for injections, implants and optical access</p>
+        <p class="lead">A browser workspace that puts the mouse brain atlas and the hardware of an experiment into the same 3D scene, so a surgery can be checked before it is attempted.</p>
+        <div class="page-actions"><a class="button" href="https://bhlee1117.github.io/BrainCAD/" rel="noopener">Open BrainCAD</a><a class="button ghost" href="https://github.com/bhlee1117/BrainCAD" rel="noopener">GitHub</a></div>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <figure class="wide-media">
+        <div class="media-frame" style="aspect-ratio: 16 / 10">
+          <video class="loop-video" autoplay muted loop playsinline preload="metadata" poster="/assets/img/projects/braincad.webp" aria-label="BrainCAD in use: orbiting the 3D mouse brain, switching preset views, and moving the target so the atlas slice views update.">
+            <source src="/assets/video/braincad-demo.mp4" type="video/mp4">
+          </video>
+        </div>
+          <figcaption>Orbiting the brain, switching to preset views, and moving the stereotaxic target so the coronal, sagittal and horizontal slices follow it.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container narrow detail-prose">
+      <section class="detail-block">
+        <h2>Why I built it</h2>
+          <p>Planning a prism implant means holding several things in your head at once: where the target sits in the atlas, what angle the objective needs, and whether the implant can get there without hitting the headplate or another implant. I was doing that with paper sketches and a lot of guessing.</p>
+          <p>BrainCAD makes the question literal. Place the target, place the hardware, and the geometry answers for you.</p>
+      </section>
+      <section class="detail-block">
+        <h2>What it does</h2>
+          <p>Enter a stereotaxic coordinate and it tells you which structure you are in, with the three orthogonal atlas slices updating around the target. Pipettes, cannulas, prisms, objectives and imported STL/OBJ/GLB parts go into the same scene, with clearance and collision checks between them.</p>
+          <p>It renders the view down an objective, overlays axon projection data from the Allen connectivity atlas, and can run the connectivity question backwards: given a coordinate I can physically reach, what projects to it?</p>
+          <p>A plan saves to a file and exports as a planning sheet with fixed viewpoints, so two plans can be compared side by side.</p>
+      </section>
+      <section class="detail-block">
+        <h2>Decisions worth noting</h2>
+          <p>Bregma positions and atlas-to-stereotaxic scalings are not hard-coded. Each coordinate profile carries its citation and its confidence, and the app refuses to pair a profile with a volume it was not measured on, because that mistake produces coordinates that look fine and are wrong by millimetres.</p>
+          <p>The atlas is an averaged brain, not the skull in front of you, so collision checking runs between objects rather than against tissue by default. Clearance beyond the exact-query window is reported as a labelled lower bound rather than a precise-looking number that is not.</p>
+          <p>Tests run against the real downloaded atlas and assert that published coordinates land in the structures they were published for. Self-consistency tests cannot catch an axis swap; these can, and did.</p>
+      </section>
+        <ul class="chips" aria-label="Built with"><li>TypeScript</li><li>three.js</li><li>Vite</li><li>Allen CCFv3</li><li>three-mesh-bvh</li></ul>
+        <p class="media-note">A planning tool, not a substitute for verification: coordinates, levelling and access should still be checked experimentally.</p>
+        <p class="back-link"><a href="/projects/">← All vibe coding projects</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="/">Byung Hun Lee</a>
+        <p>Department of Chemistry and Chemical Biology, Harvard University<br>12 Oxford Street, Cambridge, MA 02138</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="mailto:byunghun_lee@fas.harvard.edu">byunghun_lee@fas.harvard.edu</a></li>
+        <li><a href="https://github.com/bhlee1117" rel="noopener">GitHub</a></li>
+        <li><a href="https://scholar.google.com/citations?user=bluHPzY7HD0C" rel="noopener">Google Scholar</a></li>
+        <li><a href="/assets/cv/Byung_Hun_Lee_CV.pdf">CV (PDF)</a></li>
+      </ul>
+    </div>
+    <div class="container footer-meta">© <span id="year">2026</span> Byung Hun Lee</div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
